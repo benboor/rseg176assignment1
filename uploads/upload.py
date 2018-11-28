@@ -34,7 +34,7 @@ def upload():
 		try:
 		
 			#sending the data to s3...	
-			imageData = open('C:/Users/Administrator/Documents/assignment1/rseg176assignment1/uploads/static/img/' + "upload.png", 'rb') 
+			imageData = open('C:/temp_rek/uploads/static/img' + "upload.png", 'rb') 
 			s3.put_object(Bucket='resg176harrybenbucket', Key="upload.png", Body=imageData) #Key='robotImg.png', Body=data)				
 			
 			##using the rekognition api...
@@ -73,7 +73,7 @@ def upload():
 				
 			#sanetizing the upload folder for future use...
 			del(imageData)
-			os.remove('C:/Users/Administrator/Documents/assignment1/rseg176assignment1/uploads/static/img/upload.png')
+			os.remove('C:/temp_rek/uploads/static/img/upload.png')
 			
 			
 			#testing for person name in objects...
