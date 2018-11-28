@@ -73,8 +73,7 @@ def upload():
 				
 			#sanetizing the upload folder for future use...
 			del(imageData)
-			os.remove('C:/temp_rek/uploads/static/img/upload.png')
-			
+			os.remove('C:/temp_rek/uploads/static/img/upload.png')			
 			
 			#testing for person name in objects...
 			if personName in prePersonTestOutput :
